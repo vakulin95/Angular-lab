@@ -6,6 +6,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { SkiComponent } from './ski/ski.component';
 import { EquipmentComponent } from './equipment/equipment.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

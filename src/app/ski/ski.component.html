@@ -1,1 +1,24 @@
-<h2>SKI PAGE</h2>
+<h2>Available skis</h2>
+
+<div *ngIf="ski_used">
+    <h3>{{ ski_used.manuf | uppercase }} {{ski_used.model}}</h3>
+    <div><span>id: </span>{{ski_used.id}}</div>
+    <div>
+        <label>Model:
+            <input [(ngModel)]="ski_used.model" placeholder="model">
+        </label>
+    </div>
+    <div><span>Size: </span>{{ski_used.size}}</div>
+    <div><span>Radius: </span>{{ski_used.radius}}</div> 
+    <img src="assets/img/{{ski_used.pic}}">
+</div>    
+
+<ul class="ski-class">
+  <li *ngFor="let ski of ski_list_used"
+    [class.selected]="ski === ski_used"
+    (click)="onSelect(ski)">
+    <span class="badge">{{ski.id}}</span> 
+        {{ski.manuf}} {{ski.model}} 
+  </li>
+</ul>
+ 
