@@ -1,9 +1,8 @@
 import { Equipment_template } from './equipment-class';
 
 export const Equipment_list: Equipment_template[] = [
-  { id: 1120, manuf: 'Dynastar', model: 'MYTHIC 87', size: 171, radius: 15, pic: "1.jpg" },
-  { id: 1120, manuf: 'Dynastar', model: 'LEGEND FACTORY', size: 190, radius: 22, pic: "2.jpg" },
-  { id: 1120, manuf: 'Dynastar', model: 'SLICER FACTORY', size: 160, radius: 17, pic: "3.jpg" },
-  { id: 1120, manuf: 'Nordica', model: 'ENFORCER PRO', size: 185, radius: 21, pic: "4.jpg" },
-  { id: 1120, manuf: 'Nordica', model: 'SOUL RIDER 87', size: 175, radius: 16, pic: "5.jpg" }
+  { id: 1120, manuf: 'K2', model: 'DIVERSION', size: 'M', pic: "6.jpg" },
+  { id: 1120, manuf: 'K2', model: 'THRIVE', size: 'S', pic: "7.jpg" },
+  { id: 1120, manuf: 'Lazer', model: 'EFFECT', size: 'L', pic: "8.jpg" },
+  { id: 1120, manuf: 'Mango', model: 'CAYMAN HEP', size: 'M', pic: "9.jpg" }
 ];

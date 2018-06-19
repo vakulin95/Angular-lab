@@ -53,6 +53,8 @@
 
   img {
       position: static;
-      margin-top: -150pt;
+      height: 300px;
+      width: 300px;
+      margin-top: -120pt;
       margin-left: 250pt;
   }
