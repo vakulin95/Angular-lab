@@ -1,1 +1,24 @@
-<h2>EQUIPMENT PAGE</h2>
+<h2>Available equipment</h2>
+
+<div *ngIf="equipment_used">
+    <h3>{{ equipment_used.manuf | uppercase }} {{equipment_used.model}}</h3>
+    <div><span>id: </span>{{equipment_used.id}}</div>
+    <div>
+        <label>Model:
+            <input [(ngModel)]="equipment_used.model" placeholder="model">
+        </label>
+    </div>
+    <div><span>Size: </span>{{equipment_used.size}}</div>
+    <div><span>Radius: </span>{{equipment_used.radius}}</div> 
+    <img src="assets/img/{{equipment_used.pic}}">
+</div>    
+
+<ul class="equipment-class">
+  <li *ngFor="let equipment of equipment_list_used"
+    [class.selected]="equipment === equipment_used"
+    (click)="onSelect(equipment)">
+    <span class="badge">{{equipment.id}}</span> 
+        {{equipment.manuf}} {{equipment.model}} 
+  </li>
+</ul>
+ 
