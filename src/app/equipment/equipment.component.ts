@@ -16,10 +16,22 @@ export class EquipmentComponent implements OnInit {
   equipment_used : Equipment_template;
 
   ngOnInit() {
+    this.equipment_list_used = this.equipment_list_used.sort(this.sortOn("id"));
   }
 
   onSelect(x: Equipment_template): void {
     this.equipment_used = x;
   }
 
+  sortOn(property: string){ 
+    return function(a: any, b: any){ 
+      if(a[property] < b[property]){ 
+        return -1; 
+      }else if(a[property] > b[property]){ 
+        return 1; 
+      }else{ 
+        return 0; 
+      } 
+    }
+  }
 }

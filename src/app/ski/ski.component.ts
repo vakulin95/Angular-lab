@@ -15,11 +15,25 @@ export class SkiComponent implements OnInit {
 
   ski_used : Ski_template;
 
+
   ngOnInit() {
+    this.ski_list_used = this.ski_list_used.sort(this.sortOn("id"));
   }
 
   onSelect(x: Ski_template): void {
     this.ski_used = x;
+  }
+
+  sortOn(property: string){ 
+    return function(a: any, b: any){ 
+      if(a[property] < b[property]){ 
+        return -1; 
+      }else if(a[property] > b[property]){ 
+        return 1; 
+      }else{ 
+        return 0; 
+      } 
+    }
   }
 
 }

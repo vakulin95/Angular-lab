@@ -13,6 +13,7 @@
     <img src="assets/img/{{ski_used.pic}}">
 </div>    
 
+<!--
 <ul class="ski-class">
   <li *ngFor="let ski of ski_list_used"
     [class.selected]="ski === ski_used"
@@ -21,4 +22,15 @@
         {{ski.manuf}} {{ski.model}} 
   </li>
 </ul>
- 
+-->
+
+<ul class="ski-class">
+    <li *ngFor="let ski of ski_list_used | paginate: { itemsPerPage: 3, currentPage: p }" 
+        [class.selected]="ski === ski_used"
+        (click)="onSelect(ski)">
+        <span class="badge">{{ski.id}}</span> 
+        {{ski.manuf}} {{ski.model}}
+    </li>
+  </ul>
+             
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
