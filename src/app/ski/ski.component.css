@@ -1,14 +1,16 @@
 .selected {
     background-color: #CFD8DC !important;
     color: black;
-  }
-  .ski-class {
+}
+
+.ski-class {
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
     width: 15em;
-  }
-  .ski-class li {
+}
+
+.ski-class li {
     cursor: pointer;
     position: static;
     left: 0;
@@ -18,21 +20,25 @@
     width: 1360pt;
     height: 50pt;
     border-radius: 4px;
-  }
-  .ski-class li.selected:hover {
+}
+
+.ski-class li.selected:hover {
     background-color: #BBD8DC !important;
     color: black;
-  }
-  .ski-class li:hover {
+}
+
+.ski-class li:hover {
     color: #607D8B;
     background-color: #DDD;
     left: .1em;
-  }
-  .ski-class .text {
+}
+
+.ski-class .text {
     position: relative;
     top: -3px;
-  }
-  .ski-class .badge {
+}
+
+.ski-class .badge {
     display: inline-block;
     font-size: small;
     color: white;
@@ -49,39 +55,131 @@
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
     font-family: Arial, Helvetica, sans-serif;
-  }
+}
 
-  .myclassb1{
+.myclassb1_up{
     position: absolute;
     left: 960pt;
-    top: 355pt;
+    top: 340pt;
     height: 60pt;
     width: 70pt;
-  }
+    background-color: cadetblue;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-  .myclassb2{
+.myclassb1_up:hover{
     position: absolute;
     left: 960pt;
-    top: 420pt;
+    top: 340pt;
     height: 60pt;
     width: 70pt;
-  }
+    background-color: cadetblue;
+    color: maroon;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-  img {
+.myclassb1_down{
+    position: absolute;
+    left: 960pt;
+    top: 340pt;
+    height: 60pt;
+    width: 70pt;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myclassb1_down:hover{
+    position: absolute;
+    left: 960pt;
+    top: 340pt;
+    height: 60pt;
+    width: 70pt;
+    background-color: cadetblue;
+    color: maroon;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myclassb2_up{
+    position: absolute;
+    left: 1040pt;
+    top: 340pt;
+    height: 60pt;
+    width: 70pt;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myclassb2_up:hover{
+    position: absolute;
+    left: 1040pt;
+    top: 340pt;
+    height: 60pt;
+    width: 70pt;
+    background-color: cadetblue;
+    color: maroon;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myclassb2_down{
+    position: absolute;
+    left: 1040pt;
+    top: 340pt;
+    height: 60pt;
+    width: 70pt;
+    background-color: cadetblue;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myclassb2_down:hover{
+    position: absolute;
+    left: 1040pt;
+    top: 340pt;
+    height: 60pt;
+    width: 70pt;
+    background-color: cadetblue;
+    color: maroon;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myclassgp{
+    position: static;
+    margin-left: 100pt;
+}
+
+img{
     position: static;
     margin-top: -150pt;
     margin-left: 250pt;
-  }
+}
 
-  select {
+select{
     position: absolute;
-    left: 1050pt;
-    top: 355pt;
+    left: 1120pt;
+    top: 340pt;
     height: 30pt;
     width: 140pt;
-  }
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-  .myclassgp {
-    position: static;
-    margin-left: 100pt;
-  }
+select:hover{
+    position: absolute;
+    left: 1120pt;
+    top: 340pt;
+    height: 30pt;
+    width: 140pt;
+    border-radius: 8px;
+    background-color: cadetblue;
+    color: maroon;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+pagination-controls{
+    font-family: Arial, Helvetica, sans-serif;
+}

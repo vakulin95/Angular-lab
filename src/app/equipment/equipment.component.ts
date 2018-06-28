@@ -15,23 +15,60 @@ export class EquipmentComponent implements OnInit {
 
   equipment_used : Equipment_template;
 
+  gl_property : any;
+
+  gl_sort_up : number;
+
   ngOnInit() {
-    this.equipment_list_used = this.equipment_list_used.sort(this.sortOn("id"));
+    this.gl_property = "id";
+    this.gl_sort_up = 1;
+    this.equipment_list_used = this.equipment_list_used.sort(this.sort_up(this.gl_property));
   }
 
   onSelect(x: Equipment_template): void {
     this.equipment_used = x;
   }
 
-  sortOn(property: string){ 
-    return function(a: any, b: any){ 
-      if(a[property] < b[property]){ 
-        return -1; 
-      }else if(a[property] > b[property]){ 
-        return 1; 
-      }else{ 
-        return 0; 
-      } 
+  sort_up(property: any){
+    return function(a: any, b: any){
+      if(a[property] < b[property]){
+        return -1;
+      }else if(a[property] > b[property]){
+        return 1;
+      }else{
+        return 0;
+      }
     }
+  }
+
+  sort_down(property: any){
+    return function(a: any, b: any){
+      if(a[property] > b[property]){
+        return -1;
+    }else if(a[property] < b[property]){
+        return 1;
+      }else{
+        return 0;
+      }
+    }
+  }
+
+  up(){
+      this.gl_sort_up = 1;
+      this.equipment_list_used = this.equipment_list_used.sort(this.sort_up(this.gl_property));
+  }
+
+  down(){
+      this.gl_sort_up = 0;
+      this.equipment_list_used = this.equipment_list_used.sort(this.sort_down(this.gl_property));
+  }
+
+  show_gl_prop(equipment: any, property: any){
+      return equipment[property];
+  }
+
+  sort()
+  {
+      this.up();
   }
 }

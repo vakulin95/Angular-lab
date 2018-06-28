@@ -2,7 +2,7 @@
 
 <div *ngIf="ski_used">
     <h3>{{ ski_used.manuf | uppercase }} {{ski_used.model}}</h3>
-    <div><span>id: </span>{{ski_used.id}}</div>
+    <div><span>ID: </span>{{ski_used.id}}</div>
     <div>
         <label>Model:
             <input [(ngModel)]="ski_used.model" placeholder="model">
@@ -11,14 +11,25 @@
     <div><span>Size: </span>{{ski_used.size}}</div>
     <div><span>Radius: </span>{{ski_used.radius}}</div>
     <img src="assets/img/{{ski_used.pic}}">
-    <button class="myclassb1" (click)="up()">Ascending</button>
-    <button class="myclassb2" (click)="down()">Descending</button>
-    <select [(ngModel)]="gl_property" (change)="sort()">
-      <option value="id">ID</option>
-      <option value="size">Size</option>
-      <option value="radius">Radius</option>
-    </select>
+
+
 </div>
+
+<div *ngIf="gl_sort_up">
+    <button class="myclassb1_up" (click)="up()">Ascending</button>
+    <button class="myclassb2_up" (click)="down()">Descending</button>
+</div>
+
+<div *ngIf="gl_sort_up !=  1">
+    <button class="myclassb1_down" (click)="up()">Ascending</button>
+    <button class="myclassb2_down" (click)="down()">Descending</button>
+</div>
+
+<select [(ngModel)]="gl_property" (change)="sort()">
+  <option value="id">ID</option>
+  <option value="size">Size</option>
+  <option value="radius">Radius</option>
+</select>
 
 <ul class="ski-class">
     <h3 class="myclassgp"> {{gl_property | uppercase}}</h3>

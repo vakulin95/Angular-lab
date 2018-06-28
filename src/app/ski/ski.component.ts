@@ -17,10 +17,11 @@ export class SkiComponent implements OnInit {
 
   gl_property : any;
 
-  temp : any;
+  gl_sort_up : number;
 
   ngOnInit() {
     this.gl_property = "id";
+    this.gl_sort_up = 1;
     this.ski_list_used = this.ski_list_used.sort(this.sort_up(this.gl_property));
   }
 
@@ -53,10 +54,12 @@ export class SkiComponent implements OnInit {
   }
 
   up(){
+      this.gl_sort_up = 1;
       this.ski_list_used = this.ski_list_used.sort(this.sort_up(this.gl_property));
   }
 
   down(){
+      this.gl_sort_up = 0;
       this.ski_list_used = this.ski_list_used.sort(this.sort_down(this.gl_property));
   }
 
@@ -66,6 +69,6 @@ export class SkiComponent implements OnInit {
 
   sort()
   {
-      this.ski_list_used = this.ski_list_used.sort(this.sort_up(this.gl_property));
+      this.up();
   }
 }

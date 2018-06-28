@@ -9,16 +9,30 @@
         </label>
     </div>
     <div><span>Size: </span>{{equipment_used.size}}</div>
-    <div><span>Radius: </span>{{equipment_used.radius}}</div> 
     <img src="assets/img/{{equipment_used.pic}}">
-</div>    
+</div>
+
+<div *ngIf="gl_sort_up">
+    <button class="myclassb1_up" (click)="up()">Ascending</button>
+    <button class="myclassb2_up" (click)="down()">Descending</button>
+</div>
+
+<div *ngIf="gl_sort_up !=  1">
+    <button class="myclassb1_down" (click)="up()">Ascending</button>
+    <button class="myclassb2_down" (click)="down()">Descending</button>
+</div>
+
+<select [(ngModel)]="gl_property" (change)="sort()">
+  <option value="id">ID</option>
+  <option value="size">Size</option>
+</select>
 
 <ul class="equipment-class">
-  <li *ngFor="let equipment of equipment_list_used"
+    <h3 class="myclassgp"> {{gl_property | uppercase}}</h3>
+    <li *ngFor="let equipment of equipment_list_used"
     [class.selected]="equipment === equipment_used"
     (click)="onSelect(equipment)">
-    <span class="badge">{{equipment.id}}</span> 
-        {{equipment.manuf}} {{equipment.model}} 
+    <span class="badge">{{show_gl_prop(equipment, gl_property)}}</span>
+    {{equipment.manuf}} {{equipment.model}}
   </li>
 </ul>
- 

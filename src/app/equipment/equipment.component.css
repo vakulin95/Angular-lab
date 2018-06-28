@@ -50,6 +50,102 @@
     border-radius: 4px 0 0 4px;
     font-family: Arial, Helvetica, sans-serif;
   }
+  
+  .myclassb1_up{
+      position: absolute;
+      left: 960pt;
+      top: 340pt;
+      height: 60pt;
+      width: 70pt;
+      background-color: cadetblue;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .myclassb1_up:hover{
+      position: absolute;
+      left: 960pt;
+      top: 340pt;
+      height: 60pt;
+      width: 70pt;
+      background-color: cadetblue;
+      color: maroon;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .myclassb1_down{
+      position: absolute;
+      left: 960pt;
+      top: 340pt;
+      height: 60pt;
+      width: 70pt;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .myclassb1_down:hover{
+      position: absolute;
+      left: 960pt;
+      top: 340pt;
+      height: 60pt;
+      width: 70pt;
+      background-color: cadetblue;
+      color: maroon;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .myclassb2_up{
+      position: absolute;
+      left: 1040pt;
+      top: 340pt;
+      height: 60pt;
+      width: 70pt;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .myclassb2_up:hover{
+      position: absolute;
+      left: 1040pt;
+      top: 340pt;
+      height: 60pt;
+      width: 70pt;
+      background-color: cadetblue;
+      color: maroon;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .myclassb2_down{
+      position: absolute;
+      left: 1040pt;
+      top: 340pt;
+      height: 60pt;
+      width: 70pt;
+      background-color: cadetblue;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .myclassb2_down:hover{
+      position: absolute;
+      left: 1040pt;
+      top: 340pt;
+      height: 60pt;
+      width: 70pt;
+      background-color: cadetblue;
+      color: maroon;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .myclassgp{
+      position: static;
+      margin-left: 100pt;
+  }
+
 
   img {
       position: static;
@@ -57,4 +153,26 @@
       width: 300px;
       margin-top: -120pt;
       margin-left: 250pt;
+  }
+
+  select{
+      position: absolute;
+      left: 1120pt;
+      top: 340pt;
+      height: 30pt;
+      width: 140pt;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  select:hover{
+      position: absolute;
+      left: 1120pt;
+      top: 340pt;
+      height: 30pt;
+      width: 140pt;
+      border-radius: 8px;
+      background-color: cadetblue;
+      color: maroon;
+      font-family: Arial, Helvetica, sans-serif;
   }
