@@ -17,23 +17,44 @@ export class SkiComponent implements OnInit {
 
 
   ngOnInit() {
-    this.ski_list_used = this.ski_list_used.sort(this.sortOn("id"));
+    this.ski_list_used = this.ski_list_used.sort(this.sort_up("id"));
   }
 
   onSelect(x: Ski_template): void {
     this.ski_used = x;
   }
 
-  sortOn(property: string){ 
-    return function(a: any, b: any){ 
-      if(a[property] < b[property]){ 
-        return -1; 
-      }else if(a[property] > b[property]){ 
-        return 1; 
-      }else{ 
-        return 0; 
-      } 
+  sort_up(property: string){
+    return function(a: any, b: any){
+      if(a[property] < b[property]){
+        return -1;
+      }else if(a[property] > b[property]){
+        return 1;
+      }else{
+        return 0;
+      }
     }
+  }
+
+  sort_down(property: string){
+    return function(a: any, b: any){
+      if(a[property] > b[property]){
+        return -1;
+    }else if(a[property] < b[property]){
+        return 1;
+      }else{
+        return 0;
+      }
+    }
+  }
+
+  up(){
+      this.ski_list_used = this.ski_list_used.sort(this.sort_up("id"));
+  }
+
+  down()
+  {
+      this.ski_list_used = this.ski_list_used.sort(this.sort_down("id"));
   }
 
 }
