@@ -68,7 +68,20 @@
   }
 
   img {
-      position: static;
-      margin-top: -150pt;
-      margin-left: 250pt;
+    position: static;
+    margin-top: -150pt;
+    margin-left: 250pt;
+  }
+
+  select {
+    position: absolute;
+    left: 1050pt;
+    top: 355pt;
+    height: 30pt;
+    width: 140pt;
+  }
+
+  .myclassgp {
+    position: static;
+    margin-left: 100pt;
   }

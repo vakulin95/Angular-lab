@@ -15,16 +15,20 @@ export class SkiComponent implements OnInit {
 
   ski_used : Ski_template;
 
+  gl_property : any;
+
+  temp : any;
 
   ngOnInit() {
-    this.ski_list_used = this.ski_list_used.sort(this.sort_up("id"));
+    this.gl_property = "id";
+    this.ski_list_used = this.ski_list_used.sort(this.sort_up(this.gl_property));
   }
 
   onSelect(x: Ski_template): void {
     this.ski_used = x;
   }
 
-  sort_up(property: string){
+  sort_up(property: any){
     return function(a: any, b: any){
       if(a[property] < b[property]){
         return -1;
@@ -36,7 +40,7 @@ export class SkiComponent implements OnInit {
     }
   }
 
-  sort_down(property: string){
+  sort_down(property: any){
     return function(a: any, b: any){
       if(a[property] > b[property]){
         return -1;
@@ -49,12 +53,19 @@ export class SkiComponent implements OnInit {
   }
 
   up(){
-      this.ski_list_used = this.ski_list_used.sort(this.sort_up("id"));
+      this.ski_list_used = this.ski_list_used.sort(this.sort_up(this.gl_property));
   }
 
-  down()
+  down(){
+      this.ski_list_used = this.ski_list_used.sort(this.sort_down(this.gl_property));
+  }
+
+  show_gl_prop(ski: any, property: any){
+      return ski[property];
+  }
+
+  sort()
   {
-      this.ski_list_used = this.ski_list_used.sort(this.sort_down("id"));
+      this.ski_list_used = this.ski_list_used.sort(this.sort_up(this.gl_property));
   }
-
 }

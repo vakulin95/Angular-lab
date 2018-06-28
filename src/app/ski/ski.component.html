@@ -13,13 +13,19 @@
     <img src="assets/img/{{ski_used.pic}}">
     <button class="myclassb1" (click)="up()">Ascending</button>
     <button class="myclassb2" (click)="down()">Descending</button>
+    <select [(ngModel)]="gl_property" (change)="sort()">
+      <option value="id">ID</option>
+      <option value="size">Size</option>
+      <option value="radius">Radius</option>
+    </select>
 </div>
 
 <ul class="ski-class">
+    <h3 class="myclassgp"> {{gl_property | uppercase}}</h3>
     <li *ngFor="let ski of ski_list_used | paginate: { itemsPerPage: 3, currentPage: p }"
         [class.selected]="ski === ski_used"
         (click)="onSelect(ski)">
-        <span class="badge">{{ski.id}}</span>
+        <span class="badge">{{show_gl_prop(ski, gl_property)}}</span>
         {{ski.manuf}} {{ski.model}}
     </li>
 </ul>
